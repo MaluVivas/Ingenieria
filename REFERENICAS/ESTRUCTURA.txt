@@ -1,0 +1,44 @@
+frontend/
+└── src/
+    ├── assets/                  # Imágenes, íconos, fuentes locales
+    │   └── images/
+    │
+    ├── components/              # Componentes reutilizables globales
+    │   ├── ui/                  # Átomos: botones, inputs, badges, cards...
+    │   │   ├── Button.tsx
+    │   │   ├── Badge.tsx
+    │   │   └── Card.tsx
+    │   ├── layout/              # Estructura de página
+    │   │   ├── Navbar.tsx       # (tu nav.tsx actual → renombrar)
+    │   │   ├── Footer.tsx
+    │   │   └── Layout.tsx       # Wrapper que envuelve Navbar + children + Footer
+    │   └── sections/            # Secciones grandes reutilizables entre páginas
+    │       └── HeroSection.tsx
+    │
+    ├── pages/                   # Una carpeta por página/ruta
+    │   ├── Home/
+    │   │   ├── landing.tsx        # Punto de entrada de la página
+    │   │   └── sections/        # Secciones exclusivas de Home
+    │   │       ├── HeroBanner.tsx
+    │   │       ├── Features.tsx
+    │   │       └── CTA.tsx
+    │   ├── About/
+    │   │   ├── index.tsx
+    │   │   └── sections/
+    │   ├── Blog/
+    │   │   ├── index.tsx
+    │   │   └── BlogCard.tsx
+    │   └── Help/
+    │       └── index.tsx
+    │
+    ├── hooks/                   # Custom hooks (ya los tienes)
+    ├── types/                   # Interfaces y types TypeScript
+    │   └── index.ts
+    ├── constants/               # Datos estáticos, textos, configuración
+    │   └── navLinks.ts
+    ├── App.tsx
+    ├── main.tsx
+    └── index.css
+
+
+    

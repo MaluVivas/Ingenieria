@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+
+:root {
+  --font-primary: "Quicksand", sans-serif;
+  --primary-color: #fff6ea;
+  --blue-color: #9accff;
+  --bright-blue: #3097ff;
+  --orange-color: #fa824c;
+  --bright-orange: #ff631d;
+  --dark-color: #051220;
+
+
+  --confeti-bg: url("../assets/images/confetiNaranja.png");
+
+}
+
+html,
+body {
+  font-family: var(--font-primary);
+}
+
+.bg-confeti {
+  background-image: url("../assets/images/confetiNaranja.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-button {
+  border: none;
+  background-color: transparent;
+  color: #d6d6d6;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+  padding: 0;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star-button:hover {
+  transform: scale(1.1);
+}
+
+.star-active {
+  color: #ff8848;
+}
+
+.star-button:disabled {
+  cursor: default;
+}
+
+.star-button:disabled:hover {
+  transform: none;
+}

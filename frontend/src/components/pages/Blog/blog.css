@@ -1,0 +1,797 @@
+.blog-page {
+  background-color: #fff7ec;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.blog-container {
+  width: 100%;
+  margin: 0;
+  background-color: #fff7ec;
+  overflow: hidden;
+}
+
+/* SPECIES */
+.species-section {
+  background-color: #fff7ec;
+  padding: 50px 70px 45px;
+  text-align: center;
+}
+
+.species-section h1 {
+  color: #1e1e1e;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.species-list {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.species-card {
+  height: 300px;
+  border-radius: 150px 150px 0 0;
+  background-color: #9accff;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: #1e1e1e;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.species-card:nth-child(2) {
+  background-color: #d35420;
+}
+
+.species-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+.species-card span {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  z-index: 2;
+}
+
+.species-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PET OWNERS */
+.petOwnersSection {
+  position: relative;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  align-items: center;
+
+  background-color: #ff7a45;
+  min-height: 430px;
+  overflow: hidden;
+
+  padding: 0 70px 0 0;
+  box-sizing: border-box;
+}
+
+.petOwnersImage {
+  position: relative;
+  width: 600px;
+  height: 430px;
+  flex-shrink: 0;
+
+  overflow: visible;
+  justify-self: start;
+  align-self: end;
+}
+
+.blueCircle {
+  position: absolute;
+  width: 650px;
+  height: 380px;
+
+  background-color: #9accff;
+
+  border-top-right-radius: 220px;
+  border-bottom-right-radius: 220px;
+
+  left: -130px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.catOwnerImg {
+  position: absolute;
+  width: 340px;
+
+  left: 70px;
+  bottom: 0;
+
+  z-index: 2;
+}
+
+.pet-owner-text {
+  max-width: 560px;
+  justify-self: start;
+
+  margin-left: -60px;
+  color: white;
+}
+
+.pet-owner-text h2 {
+  color: white;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 22px;
+}
+
+.pet-owner-text p {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #1e1e1e;
+}
+
+/* FIRST TIME PET OWNERS */
+.first-time-section {
+  background-color: #fff7ec;
+  padding: 65px 70px 75px;
+}
+
+.first-time-section h2 {
+  max-width: 1180px;
+  margin: 0 auto 14px;
+
+  color: #1e1e1e;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.first-time-intro {
+  max-width: 1180px;
+  margin: 0 auto 36px;
+
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.tips-list {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  gap: 22px;
+}
+
+.tip-card {
+  background-color: #ffd8c2;
+  border-radius: 22px;
+  padding: 22px 30px;
+
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 22px;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.tip-icon {
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+  background-color: #ff8848;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.tip-card h3 {
+  margin: 0 0 6px;
+  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tip-card p {
+  margin: 0;
+  color: #1e1e1e;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .species-section,
+  .first-time-section {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .species-list {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .species-card {
+    height: 280px;
+  }
+
+  .petOwnersSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 35px 28px 0;
+  }
+
+  .petOwnersImage {
+    width: 320px;
+    height: 350px;
+    justify-self: center;
+  }
+
+  .blueCircle {
+    width: 350px;
+    height: 350px;
+    left: -40px;
+  }
+
+  .catOwnerImg {
+    width: 300px;
+    left: 10px;
+  }
+
+  .pet-owner-text {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  .pet-owner-text h2 {
+    font-size: 42px;
+  }
+
+  .pet-owner-text p {
+    color: #1e1e1e;
+  }
+
+  .tip-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .tip-icon {
+    margin: 0 auto;
+  }
+}
+
+/* SPECIES ARTICLES PAGE */
+.species-articles-section {
+  background-color: #fff7ec;
+  padding: 55px 70px 75px;
+}
+
+.species-articles-section h1 {
+  color: #1e1e1e;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.species-articles-intro {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1e1e1e;
+}
+
+/* SEARCH BAR */
+.article-search-row {
+  max-width: 900px;
+  margin: 0 auto 35px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.article-search {
+  height: 40px;
+  border: none;
+  border-radius: 22px;
+  background-color: #ff9b6b;
+  color: #1e1e1e;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+}
+
+.article-search span {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.article-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.article-search input::placeholder {
+  color: rgba(30, 30, 30, 0.65);
+}
+
+/* CLEAR FILTER BUTTON REMOVED */
+.article-search-row button {
+  display: none;
+}
+
+.no-articles-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e1e1e;
+  padding: 40px 0;
+}
+
+.article-list {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  gap: 28px;
+}
+
+.article-card {
+  background-color: #ffd8c2;
+  border-radius: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #1e1e1e;
+
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: stretch;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+}
+
+.article-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.article-card div {
+  padding: 30px;
+}
+
+.article-card h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.article-card p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ARTICLE DETAIL PAGE */
+.article-detail-section {
+  background-color: #fff7ec;
+  padding: 60px 70px 80px;
+}
+
+.article-hero {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.article-hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  background-color: #9accff;
+}
+
+.article-hero h1 {
+  color: #1e1e1e;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.article-author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.article-rating {
+  color: #ff8848;
+  font-size: 18px;
+}
+
+.article-content {
+  max-width: 1180px;
+  margin: 0 auto 70px;
+}
+
+.article-content p {
+  color: #1e1e1e;
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.recommended-title {
+  max-width: 1180px;
+  margin: 0 auto 28px;
+  color: #1e1e1e;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.recommended-list {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.recommended-card {
+  background-color: #e8edf0;
+  border-radius: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #1e1e1e;
+
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  align-items: center;
+}
+
+.recommended-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.recommended-card div {
+  padding: 22px;
+}
+
+.recommended-card h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+
+.recommended-card button {
+  border: none;
+  background-color: #ff8848;
+  color: white;
+  font-weight: 800;
+  padding: 12px 38px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.article-pagination {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.article-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffb28d;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.article-dot:hover {
+  transform: scale(1.15);
+}
+
+.article-dot-active {
+  background-color: #ff8848;
+}
+
+.species-hero-image {
+  max-width: 900px;
+  height: 330px;
+  margin: 0 auto 28px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.species-hero-image::before {
+  content: "";
+  position: absolute;
+
+  width: 780px;
+  height: 260px;
+
+  background-color: #9accff;
+
+  border-top-left-radius: 390px;
+  border-top-right-radius: 390px;
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1;
+}
+
+.species-hero-image img {
+  position: relative;
+  z-index: 2;
+
+  width: auto;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  display: block;
+}
+
+.article-back-button {
+  border: none;
+  background-color: transparent;
+  color: #ff631d;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+  margin-bottom: 28px;
+  padding: 0;
+}
+
+.article-back-button:hover {
+  text-decoration: underline;
+}
+
+.article-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.article-rating-summary span {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.article-comments-section {
+  max-width: 1180px;
+  margin: 0 auto 70px;
+  background-color: #ffd8c2;
+  border-radius: 28px;
+  padding: 35px 40px;
+  box-sizing: border-box;
+}
+
+.article-comments-section h2 {
+  color: #1e1e1e;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.article-comment-form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.article-comment-form label {
+  color: #1e1e1e;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.article-comment-form textarea {
+  width: 100%;
+  min-height: 95px;
+  box-sizing: border-box;
+  border: 1px solid #c9c9c9;
+  border-radius: 22px;
+  padding: 15px 18px;
+
+  outline: none;
+  resize: none;
+
+
+  font-size: 14px;
+  background-color: #fff7ec;
+}
+
+.article-comment-form textarea:focus {
+  border-color: #ff8848;
+  background-color: white;
+}
+
+.article-comment-form button {
+  width: 180px;
+  border: none;
+  background-color: #ff8848;
+  color: white;
+
+  border-radius: 24px;
+  padding: 12px;
+
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.article-comment-form button:hover {
+  background-color: #ff631d;
+}
+
+.comment-error {
+  color: #b3261e;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.article-comments-list {
+  display: grid;
+  gap: 18px;
+}
+
+.article-comment-card {
+  background-color: #fff7ec;
+  border-radius: 22px;
+  padding: 22px 24px;
+}
+
+.article-comment-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.article-comment-header h3 {
+  color: #1e1e1e;
+  font-size: 17px;
+  font-weight: 900;
+  margin: 0 0 4px;
+}
+
+.article-comment-header p {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.article-comment-text {
+  color: #1e1e1e;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.no-comments-message {
+  color: #1e1e1e;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* RESPONSIVE FOR ARTICLES */
+@media (max-width: 900px) {
+  .article-search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .article-search-row button {
+    display: none;
+  }
+
+  .article-card {
+    grid-template-columns: 1fr;
+  }
+
+  .article-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-card {
+    grid-template-columns: 1fr;
+  }
+    .article-rating-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-comments-section {
+    padding: 28px 22px;
+  }
+
+  .article-comment-header {
+    flex-direction: column;
+  }
+}
